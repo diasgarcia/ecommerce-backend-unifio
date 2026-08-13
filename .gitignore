@@ -45,6 +45,7 @@ nohup.out
 
 # VISUAL STUDIO CODE
 # Visual Studio Code
+.idea
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
