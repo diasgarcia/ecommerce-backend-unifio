@@ -21,7 +21,8 @@
       "extensions": [
         "ms-azuretools.vscode-docker",  // Docker
         "vscjava.vscode-java-pack", // Java
-        "vmware.vscode-spring-boot", // Spring Boot    
+        "vmware.vscode-spring-boot", // Spring Boot  
+        "vscjava.vscode-spring-initializr", // Spring Initializr 
         "vscjava.vscode-spring-boot-dashboard", // Dashboard de apps
         "cweijan.vscode-mysql-client2"  // MySQL
       ],
