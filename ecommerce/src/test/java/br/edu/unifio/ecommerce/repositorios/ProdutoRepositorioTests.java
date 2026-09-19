@@ -78,4 +78,30 @@ public class ProdutoRepositorioTests {
         assertTrue(produtoRepositorio.existsById(produto.getId()));
         assertEquals("Nome Teste", produtoRepositorio.findById(produto.getId()).orElseThrow().getNome());
     }
+
+    @Test
+    @Order (5)
+    public void deveAlterarUmProduto() {
+
+        Produto produto = new Produto();
+        produto.setNome("Nome Teste");
+        produto.setDescricao("Descricao Teste");
+        produto.setEstoque(Short.parseShort("1"));
+        produto.setPreco(new BigDecimal("1.00"));
+        produto.setCategoria(categoriaRepositorio.findById(Short.parseShort("1")).orElseThrow());
+        produtoRepositorio.save(produto);
+
+        produto.setNome("Nome Alterado");
+        produto.setDescricao("Descricao Alterada");
+        produto.setEstoque(Short.parseShort("2"));
+        produto.setPreco(new BigDecimal("2.00"));
+        produtoRepositorio.save(produto);
+
+        Produto alterado = produtoRepositorio.findById(produto.getId()).orElseThrow();
+
+        assertEquals("Nome Alterado", alterado.getNome());
+        assertEquals("Descricao Alterada", alterado.getDescricao());
+        assertEquals(Short.parseShort("2"), alterado.getEstoque());
+        assertEquals(new BigDecimal("2.00"), alterado.getPreco());
+    }
 }

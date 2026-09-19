@@ -28,10 +28,10 @@ INSERT INTO pedido (data, status, valor_total, cliente_id) VALUES (NOW(), 'Cance
 
 -- ITEMPEDIDO
 INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (1, 100.00, 1, 2);
-INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (1, 3299.00, 2, 1);
-INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (1, 2199.00, 3, 4);
-INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (1, 2899.00, 4, 5);
-INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (1, 349.90, 4, 3);
+INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (2, 3299.00, 2, 1);
+INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (3, 2199.00, 3, 4);
+INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (4, 2899.00, 4, 5);
+INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES (5, 349.90, 4, 3);
 
 -- PAGAMENTO
 INSERT INTO pagamento (valor, data, status, tipo, pedido_id) VALUES (100.00, NOW(), 'Pendente', 'PIX', 1);
